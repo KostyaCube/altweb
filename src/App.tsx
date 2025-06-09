@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
+import Authorization from './pages/authForm';
 
 function App() {
   return (
-     <div></div>
+     <Authorization/>
   );
 }
 
