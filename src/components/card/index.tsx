@@ -20,6 +20,39 @@ function Card(props: SoftwareCard) {
     description,
   } = props;
 
+  const Official = ({ extraClass = '' }: { extraClass?: string }) =>
+    official ? (
+      <div className={`official ${extraClass}`}>
+        <img src={lock} alt="lock" />
+        Official software
+      </div>
+    ) : null;
+
+  const Universal = ({ extraClass = '' }: { extraClass?: string }) =>
+    universal ? (
+      <div className={`universal ${extraClass}`}>
+        <img src={circleCheck} alt="check" />
+        This software is designed to work with any site
+      </div>
+    ) : null;
+
+  const Badges = ({
+    children,
+    extraClass = '',
+  }: {
+    children?: React.ReactNode;
+    extraClass?: string;
+  }) => (
+    <div className={`badges ${extraClass}`}>
+      <div className="rating">
+        {rating} <img src={star} alt="star" />
+      </div>
+      <div className="reviews">{reviewsCount} Reviews</div>
+      <Official />
+      {children}
+    </div>
+  );
+
   return (
     <Link to={url}>
       <div className="wrapper">
@@ -32,52 +65,18 @@ function Card(props: SoftwareCard) {
               {title} <img src={arrow} alt="arrow" />
             </div>
 
-            {official && (
-              <div className="official mobile">
-                <img src={lock} alt="lock" />
-                Official software
-              </div>
-            )}
-
-            {universal && (
-              <div className="universal">
-                <img src={circleCheck} alt="check" /> This software is designed
-                to work with any site
-              </div>
-            )}
-
-            <div className="badges">
-              <div className="rating">
-                {rating} <img src={star} alt="star" />
-              </div>
-
-              <div className="reviews">{reviewsCount} Reviews</div>
-
-              {official && (
-                <div className="official">
-                  <img src={lock} alt="lock" />
-                  Official software
-                </div>
-              )}
-            </div>
+            <Official extraClass="mobile" />
+            <Universal />
+            <Badges />
           </div>
         </div>
+
         <span className="description">{description}</span>
 
-        {universal && (
-          <div className="universal mobile">
-            <img src={circleCheck} alt="check" /> This software is designed to
-            work with any site
-          </div>
-        )}
-
-        <div className="badges mobile">
-          <div className="rating">
-            {rating} <img src={star} alt="star" />
-          </div>
-          <div className="reviews">{reviewsCount} Reviews</div>
+        <Universal extraClass="mobile" />
+        <Badges extraClass="mobile">
           <span className="price mobile">{price}</span>
-        </div>
+        </Badges>
       </div>
     </Link>
   );

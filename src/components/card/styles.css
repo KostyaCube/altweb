@@ -159,6 +159,7 @@ img {
 
   .price.mobile {
     display: block;
+    position: absolute;
     top: -2px;
     right: 0;
   }
