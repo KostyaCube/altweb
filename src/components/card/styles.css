@@ -1,0 +1,117 @@
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: initial;
+}
+
+.wrapper {
+  border: 1px solid #e1eaf6;
+  border-radius: 10px;
+  padding: 12px 20px;
+  position: relative;
+  cursor: pointer;
+  min-height: 158px;
+}
+
+.card-info {
+  display: flex;
+  gap: 20px;
+  padding-right: 40px
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #333333;
+  margin: 0;
+}
+
+.title img {
+  margin-left: 10px;
+  margin-bottom: -2px;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: right;
+  color: #00a1b3;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #5b6a7d;
+}
+
+.universal {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+
+.universal img {
+  margin-bottom: -2px;
+  margin-right: 4px;
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+  max-height: 24px;
+}
+
+.rating {
+  padding: 0px 14px 3px 14px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #e1eaf6;
+}
+
+.rating img {
+  margin-bottom: -2px;
+  margin-left: 2px;
+}
+
+.reviews {
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+  color: #5b6a7d;
+}
+
+.official {
+  padding: 0px 14px 3px 14px;
+  border-radius: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  background-color: #00a1b3;
+}
+
+.official img {
+  margin-bottom: -3px;
+  margin-right: 6px;
+}
