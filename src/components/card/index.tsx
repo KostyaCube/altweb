@@ -23,20 +23,26 @@ function Card(props: SoftwareCard) {
   return (
     <Link to={url}>
       <div className="wrapper">
-        <div className="card-info">
+        <div className="card">
           <img src={imgSrc} alt={title} />
           <span className="price">{price}</span>
 
-          <div className="title-wrapper">
+          <div className="card-info">
             <div className="title">
-              {title}
-              <img src={arrow} alt="arrow" />
+              {title} <img src={arrow} alt="arrow" />
             </div>
+
+            {official && (
+              <div className="official mobile">
+                <img src={lock} alt="lock" />
+                Official software
+              </div>
+            )}
 
             {universal && (
               <div className="universal">
-                <img src={circleCheck} alt="check"></img> This software is
-                designed to work with any site
+                <img src={circleCheck} alt="check" /> This software is designed
+                to work with any site
               </div>
             )}
 
@@ -57,6 +63,21 @@ function Card(props: SoftwareCard) {
           </div>
         </div>
         <span className="description">{description}</span>
+
+        {universal && (
+          <div className="universal mobile">
+            <img src={circleCheck} alt="check" /> This software is designed to
+            work with any site
+          </div>
+        )}
+
+        <div className="badges mobile">
+          <div className="rating">
+            {rating} <img src={star} alt="star" />
+          </div>
+          <div className="reviews">{reviewsCount} Reviews</div>
+          <span className="price mobile">{price}</span>
+        </div>
       </div>
     </Link>
   );

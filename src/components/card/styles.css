@@ -6,6 +6,23 @@ a:visited {
   color: initial;
 }
 
+img {
+  max-width: 90px;
+  max-height: 90px;
+}
+
+.badges.mobile {
+  display: none;
+}
+
+.official.mobile {
+  display: none;
+}
+
+.universal.mobile {
+  display: none;
+}
+
 .wrapper {
   border: 1px solid #e1eaf6;
   border-radius: 10px;
@@ -15,10 +32,10 @@ a:visited {
   min-height: 158px;
 }
 
-.card-info {
+.card {
   display: flex;
   gap: 20px;
-  padding-right: 40px
+  padding-right: 40px;
 }
 
 .title {
@@ -30,11 +47,11 @@ a:visited {
 }
 
 .title img {
-  margin-left: 10px;
+  margin-left: 8px;
   margin-bottom: -2px;
 }
 
-.title-wrapper {
+.card-info {
   display: flex;
   flex-direction: column;
 }
@@ -114,4 +131,68 @@ a:visited {
 .official img {
   margin-bottom: -3px;
   margin-right: 6px;
+}
+
+@media (max-width: 600px) {
+  img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .wrapper {
+    padding: 20px 15px;
+    min-height: 110px;
+  }
+
+  .title img {
+    margin-left: 6px;
+    margin-bottom: -2px;
+  }
+
+  .card {
+    padding-right: 0;
+  }
+
+  .price {
+    display: none;
+  }
+
+  .price.mobile {
+    display: block;
+    top: -2px;
+    right: 0;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .universal {
+    display: none;
+  }
+
+  .universal.mobile {
+    display: block;
+  }
+
+  .badges {
+    display: none;
+  }
+
+  .badges.mobile {
+    display: flex;
+    position: relative;
+    padding-right: 10px;
+  }
+
+  .official {
+    display: none;
+  }
+
+  .official.mobile {
+    display: block;
+    max-width: fit-content;
+    max-height: 21px;
+    margin-top: 10px;
+  }
 }
