@@ -68,8 +68,8 @@ function Cards() {
   return (
     <div className="container">
       <h2>Software</h2>
-      {cards.map((card) => (
-        <Card key={card.title} {...card} />
+      {cards.map((card, index) => (
+        <Card key={card.title + index} {...card} />
       ))}
     </div>
   );
