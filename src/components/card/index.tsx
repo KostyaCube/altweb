@@ -53,7 +53,7 @@ function Card(props: SoftwareCard) {
 
   return (
     <Link to={url}>
-      <div className="relative border border-blue-100 rounded-lg p-5 sm:min-h-[158px] min-h-[110px] cursor-pointer">
+      <div className="relative border border-blue-100 rounded-lg p-[15px] sm:p-6 sm:min-h-[158px] min-h-[110px] cursor-pointer">
         <div className="flex gap-5 sm:pr-16 pr-3">
           <img
             src={imgSrc}
@@ -61,7 +61,7 @@ function Card(props: SoftwareCard) {
             className="w-[60px] h-[60px] sm:w-[90px] sm:h-[90px] object-contain"
           />
 
-          <span className="hidden sm:block absolute top-3 right-5 text-cyan-600 font-semibold text-lg">
+          <span className="hidden sm:block absolute top-5 right-5 text-cyan-600 font-semibold text-lg">
             {price}
           </span>
 
